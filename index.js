@@ -5,7 +5,7 @@ import chalkAnimation from "chalk-animation";
 async function welcome() {
     let title = chalkAnimation.karaoke(`\t----------------------------------------- \n\t      Welcome To Currency Converter\n\t-----------------------------------------`, 2);
     await new Promise((resolve) => {
-        setTimeout(resolve, 1900);
+        setTimeout(resolve, 1700);
     });
     title.stop();
 }
