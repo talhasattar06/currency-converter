@@ -2,6 +2,20 @@
 
 import inquirer from "inquirer";
 import chalk from "chalk";
+import chalkAnimation from "chalk-animation";
+
+async function welcome() {
+    let title = chalkAnimation.karaoke(`\t-----------------------------------------
+                                        \n\t      Welcome To Currency Converter
+                                      \n\t-----------------------------------------`, 2);
+    await new Promise((resolve) => {
+        setTimeout(resolve, 1900);
+
+    });
+    title.stop()
+
+}
+await welcome();
 
 const currency: any = {
     USD: 1,              // US Dollar, Base Currency

@@ -1,6 +1,15 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
+import chalkAnimation from "chalk-animation";
+async function welcome() {
+    let title = chalkAnimation.karaoke(`\t----------------------------------------- \n\t      Welcome To Currency Converter\n\t-----------------------------------------`, 2);
+    await new Promise((resolve) => {
+        setTimeout(resolve, 1900);
+    });
+    title.stop();
+}
+await welcome();
 const currency = {
     USD: 1, // US Dollar, Base Currency
     CHF: 0.90, // Swiss Franc
