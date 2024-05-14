@@ -3,9 +3,9 @@ import inquirer from "inquirer";
 import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
 async function welcome() {
-    let title = chalkAnimation.karaoke(`\t----------------------------------------- \n\t      Welcome To Currency Converter\n\t-----------------------------------------`, 2);
+    let title = chalkAnimation.karaoke(`\t----------------------------------------- \n\t      Welcome To Currency Converter\n\t----------------------------------------- \n`, 2);
     await new Promise((resolve) => {
-        setTimeout(resolve, 1700);
+        setTimeout(resolve, 1800);
     });
     title.stop();
 }
@@ -27,13 +27,13 @@ const currency = {
 let answer = await inquirer.prompt([
     {
         name: "from",
-        message: chalk.hex('#7DF9FF')("Select From Currency"),
+        message: chalk.hex('#7DF9FF')("Select From Currency: "),
         type: "list",
         choices: ["USD", "CHF", "EUR", "GBP", "CAD", "AUD", "NZD", "QAR", "SAR", "JPY", "INR", "PKR"]
     },
     {
         name: "to",
-        message: chalk.hex('#7DF9FF')("Select To Currency"),
+        message: chalk.hex('#7DF9FF')("Select To Currency: "),
         type: "list",
         choices: ["USD", "CHF", "EUR", "GBP", "CAD", "AUD", "NZD", "QAR", "SAR", "JPY", "INR", "PKR"]
     },
